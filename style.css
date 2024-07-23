@@ -1,0 +1,121 @@
+body {
+  background-image: url('https://i.pinimg.com/originals/a5/68/e4/a568e4e057b0245e6dcd915588718d2d.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#screen {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #fff;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.history {
+  height: 100px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  background-color: #4a4a4a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+button:active {
+  background-color: #555;
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+#toggle-theme, #toggle-history, #clear-history {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4a4a4a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#toggle-theme:hover, #toggle-history:hover, #clear-history:hover {
+  background-color: #333;
+}
+
+body.dark-mode {
+  background-color: #333;
+  background-image: none;
+}
+
+body.dark-mode .calculator {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode #screen, body.dark-mode .history {
+  background-color: #555;
+  color: #fff;
+}
+
+body.dark-mode button {
+  background-color: #666;
+}
+
+body.dark-mode button:hover {
+  background-color: #555;
+}
+
+body.dark-mode button:active {
+  background-color: #777;
+}
